@@ -1,0 +1,6 @@
+C:\Users\elennox\Desktop\junk\Euler\euler10\euler10\bin\Debug\euler10.exe.config
+C:\Users\elennox\Desktop\junk\Euler\euler10\euler10\bin\Debug\euler10.exe
+C:\Users\elennox\Desktop\junk\Euler\euler10\euler10\bin\Debug\euler10.pdb
+C:\Users\elennox\Desktop\junk\Euler\euler10\euler10\obj\Debug\euler10.csprojResolveAssemblyReference.cache
+C:\Users\elennox\Desktop\junk\Euler\euler10\euler10\obj\Debug\euler10.exe
+C:\Users\elennox\Desktop\junk\Euler\euler10\euler10\obj\Debug\euler10.pdb
