@@ -96,32 +96,98 @@ namespace Euler11
 
         private static void left(int num, List<List<int>> grid, int col, int row)
         {
-
+            if (col - 3 >= 0)
+            {
+                var num1 = grid[row][col];
+                var num2 = grid[row][col-1];
+                var num3 = grid[row][col-2];
+                var num4 = grid[row][col-3];
+                var sum = num1 * num2 * num3 * num4;
+                if (sum > bigSum)
+                {
+                    bigSum = sum;
+                }
+            }
         }
 
         private static void right(int num, List<List<int>> grid, int col, int row)
         {
-
+            if (col + 3 <= 19)
+            {
+                var num1 = grid[row][col];
+                var num2 = grid[row][col + 1];
+                var num3 = grid[row][col + 2];
+                var num4 = grid[row][col + 3];
+                var sum = num1 * num2 * num3 * num4;
+                if (sum > bigSum)
+                {
+                    bigSum = sum;
+                }
+            }
         }
 
         private static void upright(int num, List<List<int>> grid, int col, int row)
         {
-
+            if(row - 3 >= 0 && col + 3 <= 19)
+            {
+                var num1 = grid[row][col];
+                var num2 = grid[row-1][col+1];
+                var num3 = grid[row-2][col+2];
+                var num4 = grid[row-3][col+3];
+                var sum = num1 * num2 * num3 * num4;
+                if (sum > bigSum)
+                {
+                    bigSum = sum;
+                }
+            }
         }
 
         private static void upleft(int num, List<List<int>> grid, int col, int row)
         {
-
+            if (row - 3 >= 0 && col - 3 >= 0)
+            {
+                var num1 = grid[row][col];
+                var num2 = grid[row - 1][col - 1];
+                var num3 = grid[row - 2][col - 2];
+                var num4 = grid[row - 3][col - 3];
+                var sum = num1 * num2 * num3 * num4;
+                if (sum > bigSum)
+                {
+                    bigSum = sum;
+                }
+            }
         }
 
         private static void downleft(int num, List<List<int>> grid, int col, int row)
         {
-
+            if (row + 3 <= 19 && col - 3 >= 0)
+            {
+                var num1 = grid[row][col];
+                var num2 = grid[row + 1][col - 1];
+                var num3 = grid[row + 2][col - 2];
+                var num4 = grid[row + 3][col - 3];
+                var sum = num1 * num2 * num3 * num4;
+                if (sum > bigSum)
+                {
+                    bigSum = sum;
+                }
+            }
         }
 
         private static void downright(int num, List<List<int>> grid, int col, int row)
         {
-
+            if (row + 3 <= 19 && col + 3 <= 19)
+            {
+                var num1 = grid[row][col];
+                var num2 = grid[row + 1][col + 1];
+                var num3 = grid[row + 2][col + 2];
+                var num4 = grid[row + 3][col + 3];
+                var sum = num1 * num2 * num3 * num4;
+                if (sum > bigSum)
+                {
+                    bigSum = sum;
+                }
+            }
         }
 
     }
