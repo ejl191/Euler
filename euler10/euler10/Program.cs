@@ -26,8 +26,11 @@ namespace euler10
                 r++;
             }
 
-            var test = numbers.Where(x => x.Value == false && x.Key != 1 && x.Key != 0);
-           // foreach(var
+            var test = numbers.Where(x => x.Value == false && x.Key != 1 && x.Key != 0).ToList();
+            for (var l = 0; l < test.Count(); l++)
+            {
+                total = total + test[l].Key;
+            }
             Console.WriteLine(test.Count());
             Console.WriteLine(total);
             Console.ReadLine();
