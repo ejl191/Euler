@@ -9,10 +9,10 @@ namespace euler10
     class Program
     {
         static Dictionary<int, bool> numbers = new Dictionary<int, bool>();
+        static Int64 total = 0;
         static void Main(string[] args)
         {
-            Int64 total = 2;
-            for (var x = 2; x < 2000000; x++)
+            for (var x = 0; x <= 2000000; x++)
             {
                 numbers.Add(x, false);
             }
@@ -22,14 +22,13 @@ namespace euler10
             while (r < 2000000)
             {
                 setNonPrimes(r);
-                r = numbers.FirstOrDefault(x => x.Value == false && x.Key != r && x.Key > r).Key;
-                total = total + r;
-              
-                    Console.WriteLine(r);
-                
+                Console.WriteLine(r);
+                r++;
             }
 
-
+            var test = numbers.Where(x => x.Value == false && x.Key != 1 && x.Key != 0);
+           // foreach(var
+            Console.WriteLine(test.Count());
             Console.WriteLine(total);
             Console.ReadLine();
 
@@ -39,10 +38,13 @@ namespace euler10
 
         private static void setNonPrimes(int number)
         {
-            for (var a = number; a < numbers.Count / number; a++)
+            var x = 2;
+            while (number * x <= 2000000)
             {
-                numbers[a * number] = true;
+                numbers[x * number] = true;
+                x++;
             }
+     
         }
     }
 }
