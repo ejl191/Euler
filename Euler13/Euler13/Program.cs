@@ -22,11 +22,11 @@ namespace Euler13
                 {
                     Console.WriteLine(line);
                     total = total + Double.Parse(line);
-                }
-                Console.WriteLine("Total: " + total);
-                Console.ReadLine();
-      // Process line
-  }
+                }             
+
+            }
+            Console.WriteLine("Total: " + total.ToString("F99"));
+            Console.ReadLine();
         }
     }
 }
